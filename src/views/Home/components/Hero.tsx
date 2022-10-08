@@ -126,15 +126,15 @@ const Hero = () => {
       >
         <Flex flex="1" flexDirection="column">
           <Heading scale="xxl" color="secondary" mb="24px">
-            {t('The moon is made of pancakes.')}
+            {t('The Most Used DeFi Tool.')}
           </Heading>
           <Heading scale="md" mb="24px">
-            {t('Trade, earn, and win crypto on the most popular decentralized platform in the galaxy.')}
+            {t('Stake,Burn and Earn With The First DeFi Burning Protocol FlameFinance. Earn Tokens With The New Burn To Earn(B2E) Staking Modal..')}
           </Heading>
           <Flex>
             {!account && <ConnectWalletButton mr="8px" />}
-            <NextLinkFromReactRouter to="/swap">
-              <Button variant={!account ? 'secondary' : 'primary'}>{t('Trade Now')}</Button>
+            <NextLinkFromReactRouter to="/farms">
+              <Button variant={!account ? 'secondary' : 'primary'}>{t('Explore Now')}</Button>
             </NextLinkFromReactRouter>
           </Flex>
         </Flex>
@@ -145,12 +145,7 @@ const Hero = () => {
           mb={['24px', null, null, '0']}
           position="relative"
         >
-          <BunnyWrapper>
-            <Image src={bunnyImage} priority placeholder="blur" alt={t('Lunar bunny')} />
-          </BunnyWrapper>
-          <StarsWrapper>
-            <CompositeImage {...starsImage} />
-          </StarsWrapper>
+          
         </Flex>
       </Flex>
     </>
