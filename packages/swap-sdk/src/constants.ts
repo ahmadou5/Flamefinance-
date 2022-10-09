@@ -10,6 +10,8 @@ export enum ChainId {
   GOERLI = 5,
   BSC = 56,
   BSC_TESTNET = 97,
+  CELO = 42220,
+  CELO_TESTNET = 44787,
 }
 
 export enum TradeType {
@@ -125,6 +127,7 @@ export const WBNB = {
   ),
 }
 
+
 export const WNATIVE: Record<number, Token> = {
   [ChainId.ETHEREUM]: WETH9[ChainId.ETHEREUM],
   [ChainId.RINKEBY]: WETH9[ChainId.RINKEBY],
@@ -144,6 +147,8 @@ export const NATIVE: Record<
   [ChainId.ETHEREUM]: { name: 'Ether', symbol: 'ETH', decimals: 18 },
   [ChainId.RINKEBY]: { name: 'Rinkeby Ether', symbol: 'RIN', decimals: 18 },
   [ChainId.GOERLI]: { name: 'Goerli Ether', symbol: 'GOR', decimals: 18 },
+  [ChainId.CELO]: { name: 'CELO', symbol: 'Celo', decimals: 18 },
+  [ChainId.CELO_TESTNET]: { name: 'CELO', symbol: 'tCELO', decimals: 18 },
   [ChainId.BSC]: {
     name: 'Binance Chain Native Token',
     symbol: 'BNB',

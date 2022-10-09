@@ -338,11 +338,7 @@ const Farms: React.FC<React.PropsWithChildren> = ({ children }) => {
               </Button>
             </NextLinkFromReactRouter>
           </Box>
-          {(chainId === ChainId.BSC || chainId === ChainId.BSC_TESTNET) && (
-            <Box>
-              <BCakeBoosterCard />
-            </Box>
-          )}
+         
         </FarmFlexWrapper>
       </PageHeader>
       <Page>
@@ -442,7 +438,7 @@ const Farms: React.FC<React.PropsWithChildren> = ({ children }) => {
           </Flex>
         )}
         {poolLength && <div ref={observerRef} />}
-        <StyledImage src="/images/decorations/3dpan.png" alt="Pancake illustration" width={120} height={103} />
+       
       </Page>
       {createPortal(<ScrollToTopButton />, document.body)}
     </FarmsContext.Provider>

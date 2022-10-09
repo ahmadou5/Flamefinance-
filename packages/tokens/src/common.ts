@@ -11,10 +11,10 @@ export const CAKE_MAINNET = new Token(
 
 export const CAKE_TESTNET = new Token(
   ChainId.BSC_TESTNET,
-  '0xFa60D973F7642B748046464e165A65B7323b0DEE',
+  '0xB289e7b820F9b85e28156232085da7307795934f',
   18,
-  'CAKE',
-  'PancakeSwap Token',
+  'Flame',
+  'FlameFinance Token',
   'https://pancakeswap.finance/',
 )
 
@@ -117,12 +117,14 @@ export const BUSD_GOERLI = new Token(
   'https://www.paxos.com/busd/',
 )
 
+
 export const BUSD: Record<ChainId, Token> = {
   [ChainId.ETHEREUM]: BUSD_ETH,
   [ChainId.RINKEBY]: BUSD_RINKEBY,
   [ChainId.GOERLI]: BUSD_GOERLI,
   [ChainId.BSC]: BUSD_BSC,
   [ChainId.BSC_TESTNET]: BUSD_TESTNET,
+  
 }
 
 export const CAKE = {

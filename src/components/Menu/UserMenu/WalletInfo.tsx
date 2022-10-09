@@ -31,8 +31,7 @@ const WalletInfo: React.FC<WalletInfoProps> = ({ hasLowNativeBalance, onDismiss 
     logout()
   }
 
-  const isBSC = native.chainId === ChainId.BSC
-
+  const isBSC = native.chainId === ChainId.CELO_TESTNET
   return (
     <>
       <Text color="secondary" fontSize="12px" textTransform="uppercase" fontWeight="bold" mb="8px">
@@ -68,7 +67,7 @@ const WalletInfo: React.FC<WalletInfoProps> = ({ hasLowNativeBalance, onDismiss 
         <Flex alignItems="center">
           {!isBSC && <ChainLogo chainId={56} />}
           <Text ml={isBSC ? 0 : '8px'} color="textSubtle">
-            {t('CAKE Balance')}
+            {t('Flame Balance')}
           </Text>
         </Flex>
         {cakeFetchStatus !== FetchStatus.Fetched ? (

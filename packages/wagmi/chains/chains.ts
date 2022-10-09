@@ -67,23 +67,23 @@ export const fantomTestnet: Chain = {
   testnet: true,
 }
 
-const bscExplorer = { name: 'BscScan', url: 'https://bscscan.com' }
+const bscExplorer = { name: 'CeloScan', url: 'https://celoscan.io/' }
 
 export const bsc: Chain = {
-  id: 56,
-  name: 'BNB Smart Chain',
-  network: 'bsc',
+  id: 42220,
+  name: 'CELO Chain',
+  network: 'celo',
   rpcUrls: {
-    public: 'https://bsc-dataseed1.binance.org',
-    default: 'https://bsc-dataseed1.binance.org',
+    public: 'https://forno.celo.org',
+    default: 'https://forno.celo.org',
   },
   blockExplorers: {
     default: bscExplorer,
     etherscan: bscExplorer,
   },
   nativeCurrency: {
-    name: 'Binance Chain Native Token',
-    symbol: 'BNB',
+    name: 'CELO Native Token',
+    symbol: 'CELO',
     decimals: 18,
   },
   multicall: {
@@ -93,24 +93,24 @@ export const bsc: Chain = {
 }
 
 export const bscTest: Chain = {
-  id: 97,
-  name: 'BNB Smart Chain Testnet',
-  network: 'bsc-testnet',
+  id: 44787,
+  name: 'Celo Testnet',
+  network: 'celo-testnet',
   nativeCurrency: {
     decimals: 18,
-    name: 'Binance Chain Native Token',
-    symbol: 'tBNB',
+    name: 'Celo Chain Native Token',
+    symbol: 'tCELO',
   },
   rpcUrls: {
-    public: 'https://data-seed-prebsc-1-s2.binance.org:8545/',
-    default: 'https://data-seed-prebsc-1-s2.binance.org:8545/',
+    public: 'https://alfajores-forno.celo-testnet.org',
+    default: 'https://alfajores-forno.celo-testnet.org',
   },
   blockExplorers: {
-    default: { name: 'BscScan', url: 'https://testnet.bscscan.com' },
+    default: { name: 'CeloScan', url: 'https://alfajores.celoscan.io/' },
   },
   multicall: {
-    address: '0xcA11bde05977b3631167028862bE2a173976CA11',
-    blockCreated: 17422483,
+    address: '0xe3bacaA390bB3E80A497592E420c5C5dDCb94a3a',
+    blockCreated: 13980200,
   },
   testnet: true,
 }

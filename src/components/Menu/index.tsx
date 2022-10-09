@@ -44,11 +44,11 @@ const Menu = (props) => {
         rightSide={
           <>
             <GlobalSettings mode={SettingsMode.GLOBAL} />
-            <NetworkSwitcher />
+            <NetworkSwitcher/>
             <UserMenu />
           </>
         }
-        banner={showPhishingWarningBanner && typeof window !== 'undefined' && <PhishingWarningBanner />}
+       
         isDark={isDark}
         toggleTheme={toggleTheme}
         currentLang={currentLanguage.code}
@@ -60,7 +60,7 @@ const Menu = (props) => {
         footerLinks={getFooterLinks}
         activeItem={activeMenuItem?.href}
         activeSubItem={activeSubMenuItem?.href}
-        buyCakeLabel={t('Buy CAKE')}
+        buyCakeLabel={t('Buy Flame')}
         {...props}
       />
     </>

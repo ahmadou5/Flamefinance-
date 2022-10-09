@@ -140,16 +140,7 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
                   <CakePrice showSkeleton={false} cakePriceUsd={cakePriceUsd} />
                 </Box>
               )}
-              <Box mt="4px">
-                <LangSelector
-                  currentLang={currentLang}
-                  langs={langs}
-                  setLang={setLang}
-                  buttonScale="xs"
-                  color="textSubtle"
-                  hideLanguage
-                />
-              </Box>
+             
               {rightSide}
             </Flex>
           </StyledNav>

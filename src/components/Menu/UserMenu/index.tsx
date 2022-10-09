@@ -67,14 +67,14 @@ const UserMenu = () => {
         </UserMenuItem>
         <UserMenuDivider />
         <NextLink href={`/profile/${account?.toLowerCase()}`} passHref>
-          <UserMenuItem as="a" disabled={isWrongNetwork || chainId !== ChainId.BSC}>
+          <UserMenuItem as="a" disabled={isWrongNetwork || chainId !== ChainId.CELO_TESTNET}>
             {t('Your NFTs')}
           </UserMenuItem>
         </NextLink>
         <ProfileUserMenuItem
           isLoading={isLoading}
           hasProfile={hasProfile}
-          disabled={isWrongNetwork || chainId !== ChainId.BSC}
+          disabled={isWrongNetwork || chainId !== ChainId.CELO_TESTNET }
         />
         <UserMenuDivider />
         <UserMenuItem as="button" onClick={logout}>
