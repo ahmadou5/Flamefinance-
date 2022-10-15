@@ -44,13 +44,25 @@ const config: (
 ) => ConfigMenuItemsType[] = (t, isDark, languageCode, chainId) =>
   [
     {
-      label: t('Flame'),
+      label: t('Trade'),
       icon: SwapIcon,
       fillIcon: SwapFillIcon,
-      href: '/',
+      href: '/swap',
       showItemsOnMobile: false,
       items: [
-      
+        {
+          label: t('Swap'),
+          href: '/swap',
+        },
+        {
+          label: t('Liquidity'),
+          href: '/liquidity',
+        },
+        {
+          label: t('Bridge'),
+          href: 'https://bridge.pancakeswap.finance/',
+          type: DropdownMenuItemType.EXTERNAL_LINK,
+        },
       ].map((item) => addMenuItemSupported(item, chainId)),
     },
     {
@@ -72,7 +84,7 @@ const config: (
         },
         {
           label: t('Vault'),
-          href: '/',
+          href: '/404',
           supportChainIds: SUPPORT_ONLY_BSC,
         },
       ].map((item) => addMenuItemSupported(item, chainId)),
@@ -105,17 +117,22 @@ const config: (
       icon: MoreIcon,
       hideSubNav: true,
       items: [
-        
+        {
+          label: t('Info'),
+          href: '/info',
+          supportChainIds: SUPPORT_ONLY_BSC,
+        },
+        {
+          label: t('IFO'),
+          href: '/ifo',
+          supportChainIds: SUPPORT_ONLY_BSC,
+          image: '/images/ifos/ifo-bunny.png',
+        },
         {
           label: t('Voting'),
           href: '/voting',
           supportChainIds: SUPPORT_ONLY_BSC,
           image: '/images/voting/voting-bunny.png',
-        },
-        {
-          label: t('Info'),
-          href: '/info',
-          supportChainIds: SUPPORT_ONLY_BSC,
         },
         {
           type: DropdownMenuItemType.DIVIDER,
@@ -131,11 +148,6 @@ const config: (
         },
         {
           label: t('Blog'),
-          href: 'https://medium.com/pancakeswap',
-          type: DropdownMenuItemType.EXTERNAL_LINK,
-        },
-        {
-          label: t('Github'),
           href: 'https://medium.com/pancakeswap',
           type: DropdownMenuItemType.EXTERNAL_LINK,
         },
