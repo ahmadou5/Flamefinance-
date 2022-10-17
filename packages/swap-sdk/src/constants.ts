@@ -27,11 +27,14 @@ export enum Rounding {
 
 export const FACTORY_ADDRESS = '0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73'
 
+export const FACTORY_ADDRESS_CELO = '0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73'
+
 // // TODO: ETH This is test version, do not depends on it
 const FACTORY_ADDRESS_ETH = '0xD93801d7D3a368D94A3A32E97A20f7aC1948a5dB'
 
 export const FACTORY_ADDRESS_MAP: Record<number, string> = {
   [ChainId.ETHEREUM]: FACTORY_ADDRESS_ETH,
+  [ChainId.CELO_TESTNET]: FACTORY_ADDRESS_CELO,
   [ChainId.RINKEBY]: FACTORY_ADDRESS_ETH,
   [ChainId.GOERLI]: FACTORY_ADDRESS_ETH,
   [ChainId.BSC]: FACTORY_ADDRESS,
@@ -42,6 +45,7 @@ export const INIT_CODE_HASH = '0x00fb7f630766e6a796048ea87d01acd3068e8ff67d07814
 const INIT_CODE_HASH_ETH = '0x57224589c67f3f30a6b0d7a1b54cf3153ab84563bc609ef41dfb34f8b2974d2d'
 export const INIT_CODE_HASH_MAP: Record<number, string> = {
   [ChainId.ETHEREUM]: INIT_CODE_HASH_ETH,
+  [ChainId.CELO_TESTNET]: INIT_CODE_HASH,
   [ChainId.RINKEBY]: INIT_CODE_HASH_ETH,
   [ChainId.GOERLI]: INIT_CODE_HASH_ETH,
   [ChainId.BSC]: INIT_CODE_HASH,
@@ -127,6 +131,24 @@ export const WBNB = {
   ),
 }
 
+export const WCELO = {
+  [ChainId.CELO]: new Token(
+    ChainId.CELO,
+    '0x418D75f65a02b3D53B2418FB8E1fe493759c7605',
+    18,
+    'WCELO',
+    'Wrapped CELO',
+    'https://www.binance.org'
+  ),
+  [ChainId.CELO_TESTNET]: new Token(
+    ChainId.CELO_TESTNET,
+    '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+    18,
+    'WCELO',
+    'Wrapped CELO',
+    'https://www.binance.org'
+  ),
+}
 
 export const WNATIVE: Record<number, Token> = {
   [ChainId.ETHEREUM]: WETH9[ChainId.ETHEREUM],
@@ -134,6 +156,7 @@ export const WNATIVE: Record<number, Token> = {
   [ChainId.GOERLI]: WETH9[ChainId.GOERLI],
   [ChainId.BSC]: WBNB[ChainId.BSC],
   [ChainId.BSC_TESTNET]: WBNB[ChainId.BSC_TESTNET],
+  [ChainId.CELO_TESTNET]: WCELO[ChainId.CELO_TESTNET],
 }
 
 export const NATIVE: Record<
@@ -148,7 +171,7 @@ export const NATIVE: Record<
   [ChainId.RINKEBY]: { name: 'Rinkeby Ether', symbol: 'RIN', decimals: 18 },
   [ChainId.GOERLI]: { name: 'Goerli Ether', symbol: 'GOR', decimals: 18 },
   [ChainId.CELO]: { name: 'CELO', symbol: 'Celo', decimals: 18 },
-  [ChainId.CELO_TESTNET]: { name: 'CELO', symbol: 'tCELO', decimals: 18 },
+  [ChainId.CELO_TESTNET]: { name: 'CELO Chain Native Token', symbol: 'CELO', decimals: 18 },
   [ChainId.BSC]: {
     name: 'Binance Chain Native Token',
     symbol: 'BNB',
