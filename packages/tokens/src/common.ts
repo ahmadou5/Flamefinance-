@@ -18,6 +18,15 @@ export const CAKE_TESTNET = new Token(
   'https://pancakeswap.finance/',
 )
 
+export const FLAME_TESTNET = new Token(
+  ChainId.CELO_TESTNET,
+  '0x86e18E60F8Ef5C299e9E73A15F2Ecf7F5806E436',
+  18,
+  'Flame',
+  'FlameFinance Token',
+  'https://pancakeswap.finance/',
+)
+
 export const USDC_BSC = new Token(
   ChainId.BSC,
   '0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d',
@@ -40,6 +49,14 @@ export const USDC_ETH = new Token(ChainId.ETHEREUM, '0xA0b86991c6218b36c1d19D4a2
 
 export const USDC_RINKEBY = new Token(
   ChainId.RINKEBY,
+  '0x4DBCdF9B62e891a7cec5A2568C3F4FAF9E8Abe2b',
+  6,
+  'tUSDC',
+  'test USD Coin',
+)
+
+export const USDC_CELO_T = new Token(
+  ChainId.CELO_TESTNET,
   '0x4DBCdF9B62e891a7cec5A2568C3F4FAF9E8Abe2b',
   6,
   'tUSDC',
@@ -70,6 +87,24 @@ export const USDT_ETH = new Token(
   'USDT',
   'Tether USD',
   'https://tether.to/',
+)
+
+export const USDT_CELO_T = new Token(
+  ChainId.CELO_TESTNET,
+  '0x2Dca8f7A783D55D6ed7838BC079092Ce8BD9C66B',
+  6,
+  'USDT',
+  'Tether USD',
+  'https://tether.to/',
+)
+
+export const BUSD_CELO_T = new Token(
+  ChainId.CELO_TESTNET,
+  '0x5b4Cb969963846a49B92212815407b7E09E28693',
+  18,
+  'BUSD',
+  'Binance USD',
+  'https://www.paxos.com/busd/',
 )
 
 export const BUSD_BSC = new Token(
@@ -117,14 +152,18 @@ export const BUSD_GOERLI = new Token(
   'https://www.paxos.com/busd/',
 )
 
-
 export const BUSD: Record<ChainId, Token> = {
   [ChainId.ETHEREUM]: BUSD_ETH,
   [ChainId.RINKEBY]: BUSD_RINKEBY,
   [ChainId.GOERLI]: BUSD_GOERLI,
   [ChainId.BSC]: BUSD_BSC,
   [ChainId.BSC_TESTNET]: BUSD_TESTNET,
-  
+  [ChainId.CELO_TESTNET]: BUSD_CELO_T,
+  [ChainId.CELO]: BUSD_CELO_T,
+}
+
+export const FLAME = {
+  [ChainId.CELO_TESTNET]: FLAME_TESTNET,
 }
 
 export const CAKE = {
@@ -138,9 +177,11 @@ export const USDC = {
   [ChainId.ETHEREUM]: USDC_ETH,
   [ChainId.RINKEBY]: USDC_RINKEBY,
   [ChainId.GOERLI]: USDC_GOERLI,
+  [ChainId.CELO_TESTNET]: USDC_CELO_T,
 }
 
 export const USDT = {
   [ChainId.BSC]: USDT_BSC,
   [ChainId.ETHEREUM]: USDT_ETH,
+  [ChainId.CELO_TESTNET]: USDT_CELO_T,
 }

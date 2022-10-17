@@ -72,7 +72,7 @@ const bscExplorer = { name: 'CeloScan', url: 'https://celoscan.io/' }
 export const bsc: Chain = {
   id: 42220,
   name: 'CELO Chain',
-  network: 'celo',
+  network: 'CELO',
   rpcUrls: {
     public: 'https://forno.celo.org',
     default: 'https://forno.celo.org',

@@ -27,7 +27,7 @@ export enum Rounding {
 
 export const FACTORY_ADDRESS = '0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73'
 
-export const FACTORY_ADDRESS_CELO = '0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73'
+export const FACTORY_ADDRESS_CELO = '0x0972EC4986A872c8ee1346dC8ef2d4B63787c661'
 
 // // TODO: ETH This is test version, do not depends on it
 const FACTORY_ADDRESS_ETH = '0xD93801d7D3a368D94A3A32E97A20f7aC1948a5dB'
@@ -40,7 +40,7 @@ export const FACTORY_ADDRESS_MAP: Record<number, string> = {
   [ChainId.BSC]: FACTORY_ADDRESS,
   [ChainId.BSC_TESTNET]: '0x6725f303b657a9451d8ba641348b6761a6cc7a17',
 }
-export const INIT_CODE_HASH = '0x00fb7f630766e6a796048ea87d01acd3068e8ff67d078148a3fa3f4a84f69bd5'
+export const INIT_CODE_HASH = '0x9061b8b4e6af2f20c895c6b44dfbe2495799bde0c29db88e5ce8a05bad92dc57'
 
 const INIT_CODE_HASH_ETH = '0x57224589c67f3f30a6b0d7a1b54cf3153ab84563bc609ef41dfb34f8b2974d2d'
 export const INIT_CODE_HASH_MAP: Record<number, string> = {
@@ -48,7 +48,7 @@ export const INIT_CODE_HASH_MAP: Record<number, string> = {
   [ChainId.CELO_TESTNET]: INIT_CODE_HASH,
   [ChainId.RINKEBY]: INIT_CODE_HASH_ETH,
   [ChainId.GOERLI]: INIT_CODE_HASH_ETH,
-  [ChainId.BSC]: INIT_CODE_HASH,
+  [ChainId.BSC]: INIT_CODE_HASH_ETH,
   [ChainId.BSC_TESTNET]: '0xd0d4c4cd0848c93cb4fd1f498d7013ee6bfb25783ea21593d5834f5d250ece66',
 }
 
@@ -134,7 +134,7 @@ export const WBNB = {
 export const WCELO = {
   [ChainId.CELO]: new Token(
     ChainId.CELO,
-    '0x418D75f65a02b3D53B2418FB8E1fe493759c7605',
+    '0xB289e7b820F9b85e28156232085da7307795934f',
     18,
     'WCELO',
     'Wrapped CELO',
@@ -142,7 +142,7 @@ export const WCELO = {
   ),
   [ChainId.CELO_TESTNET]: new Token(
     ChainId.CELO_TESTNET,
-    '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+    '0xF194afDf50B03e69Bd7D057c1Aa9e10c9954E4C9',
     18,
     'WCELO',
     'Wrapped CELO',

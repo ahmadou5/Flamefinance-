@@ -1,13 +1,13 @@
-import { ChainId, Token, WBNB, WCELO } from '@pancakeswap/sdk'
-import { BUSD_TESTNET, CAKE_TESTNET, } from './common'
+import { ChainId, Token, WCELO } from '@pancakeswap/sdk'
+import { BUSD_CELO_T, FLAME } from './common'
 
 export const celoTestnetTokens = {
   wbnb: WCELO[ChainId.CELO_TESTNET],
-  cake: CAKE_TESTNET,
-  busd: BUSD_TESTNET,
+  flame: FLAME,
+  busd: BUSD_CELO_T,
   syrup: new Token(
     ChainId.CELO_TESTNET,
-    '',
+    '0xB289e7b820F9b85e28156232085da7307795934f',
     18,
     'SYRUP',
     'SyrupBar Token',
@@ -21,5 +21,4 @@ export const celoTestnetTokens = {
     'test1 Token',
     'https://www.bakeryswap.org/',
   ),
-
 }
